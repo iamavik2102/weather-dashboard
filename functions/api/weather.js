@@ -40,7 +40,7 @@ export async function onRequestGet(context) {
     });
 
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Internal execution fault on the Edge network." }), {
+    return new Response(JSON.stringify({ error: `Internal execution fault on the Edge network.Error: ${error.message}` }), {
       status: 500,
       headers: { "Content-Type": "application/json" }
     });
