@@ -20,8 +20,7 @@ export async function onRequestGet(context) {
   }
 
   // 3. Request external data from OpenWeatherMap API
-  const externalApiUrl = `https://openweathermap.org{encodeURIComponent(city)}&units=metric&appid=${apiKey}`;
-
+  const externalApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&APPID=${apiKey}`;
 
   try {
     const apiResponse = await fetch(externalApiUrl);
@@ -41,7 +40,7 @@ export async function onRequestGet(context) {
     });
 
   } catch (error) {
-    return new Response(JSON.stringify({ error: `Internal execution fault on the Edge network.Error: ${error.message}` }), {
+    return new Response(JSON.stringify({ error: `Internal execution fault on the Edge network.` }), {
       status: 500,
       headers: { "Content-Type": "application/json" }
     });
