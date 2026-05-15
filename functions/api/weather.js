@@ -20,7 +20,8 @@ export async function onRequestGet(context) {
   }
 
   // 3. Request external data from OpenWeatherMap API
-  const externalApiUrl = `openweathermap.org{encodeURIComponent(city)}&units=metric&appid=${apiKey}`;
+  const externalApiUrl = `https://openweathermap.org{encodeURIComponent(city)}&units=metric&appid=${apiKey}`;
+
 
   try {
     const apiResponse = await fetch(externalApiUrl);
