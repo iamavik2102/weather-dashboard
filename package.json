@@ -1,0 +1,10 @@
+{
+  "name": "cloudflare-pages-fullstack-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Building frontend assets... No complex bundler needed for this demo.'"
+  },
+  "devDependencies": {
+    "wrangler": "^4.91.0"
+  }
+}

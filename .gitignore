@@ -1,0 +1,22 @@
+# Local Environment Variables and Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+wrangler.toml
+
+# Cloudflare Wrangler Runtime Directories
+.wrangler/
+.dev.vars
+
+# Node.js and Dependency Caches
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Operating System System Files
+.DS_Store
+Thumbs.db
