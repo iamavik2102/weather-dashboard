@@ -62,7 +62,9 @@
 
                 document.getElementById('cityName').innerText = `${data.name}, ${data.sys.country}`;
                 document.getElementById('weatherDesc').innerText = data.weather.description;
-                document.getElementById('temp').innerText = `${Math.round(data.main.temp)}°C`;
+                // Calculation Formula: Celsius = Kelvin - 273.15
+                const celsiusTemp = data.main.temp - 273.15;
+                document.getElementById('temp').innerText = `${Math.round(celsiusTemp)}°C`;
                 document.getElementById('humidity').innerText = `${data.main.humidity}%`;
                 
                 weatherResult.classList.remove('hidden');
